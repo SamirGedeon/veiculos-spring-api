@@ -1,0 +1,31 @@
+### Listar
+GET http://localhost:8080/veiculos
+Accept: application/json
+
+### Cadastrar
+POST http://localhost:8080/veiculos
+Content-Type: application/json
+Accept: application/json
+
+{"marca": "Chevrolet", "modelo": "Vectra", "ano": 1997, "placa": "ABC1D23"}
+
+### Buscar por ID
+GET http://localhost:8080/veiculos/1
+
+### Filtrar
+GET http://localhost:8080/veiculos?marca=CHEVROLET
+
+### Atualizar (todos os campos)
+PUT http://localhost:8080/veiculos/1
+Content-Type: application/json
+
+{"marca": "Chevrolet Atualizado", "modelo": "Vectra", "ano": 1997, "placa": "ABC1D23"}
+
+### Excluir
+DELETE http://localhost:8080/veiculos/1
+
+### Inválido: 400
+POST http://localhost:8080/veiculos
+Content-Type: application/json
+
+{}
